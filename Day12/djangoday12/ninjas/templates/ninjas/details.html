@@ -1,0 +1,13 @@
+<h1>{{ dev.name }}</h1>
+<table>
+    <tr>
+        <th>Skill Name</th>
+        <th>Skill Level</th>
+    </tr>  
+    {% for skill in dev.skill_set.all %}
+        <tr>
+            <td>{{ skill.name }}</td>
+            <td>{{ skill.level }}</td>
+        </tr>
+    {% endfor %}
+</table>
