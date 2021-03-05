@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'ninjas/style.css' %}">
+
+{% if devs %}
+    <ul>
+        {% for dev in devs %}
+            <li><a href="{% url 'ninjas:details' dev.id %}">{{ dev.name }}</a></li>
+            <li>{{ dev.experience }}</li>
+            <li>{{ dev.country }}</li>
+        {% endfor %}    
+    </ul>
+{% else %}
+    <p>No developers are available.</p>
+{% endif %}    
+    
+    
+    
+
+    
